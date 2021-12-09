@@ -9,7 +9,7 @@ function Products() {
 
     async function fetchData(){
         const config = {
-            url:'http://localhost:3001/products',
+            url:'https://mausam-mock-json-server.herokuapp.com/products',
             method:"get"
         }
         const data = await axios(config)

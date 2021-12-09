@@ -10,7 +10,7 @@ function CartProductCard({id,product_name,description,price,image_url,ele_count,
 
     async function handleClick(id){
         const config = {
-            url:`http://localhost:3001/cartitems/${id}`,
+            url:`https://mausam-mock-json-server.herokuapp.com/cartitems/${id}`,
             method: 'delete'
         }
         await axios(config)

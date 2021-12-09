@@ -17,7 +17,7 @@ function CartDetails() {
 
     async function fetchData(){
         const config = {
-            url:'http://localhost:3001/cartitems',
+            url:'https://mausam-mock-json-server.herokuapp.com/cartitems',
             method:"get"
         }
         const data = await axios(config)

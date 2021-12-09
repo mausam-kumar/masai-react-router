@@ -15,7 +15,7 @@ function ProductCard({id,product_name,description,price,image_url}) {
             return
         }
         const config = {
-            url:`http://localhost:3001/products/${id}`,
+            url:`https://mausam-mock-json-server.herokuapp.com/products/${id}`,
             method: 'GET'
         }
         let fetchedData
@@ -26,14 +26,14 @@ function ProductCard({id,product_name,description,price,image_url}) {
         }
 
         const updateConfig = {
-            url:`http://localhost:3001/cartitems/${id}`,
+            url:`https://mausam-mock-json-server.herokuapp.com/cartitems/${id}`,
             method:'get'
         }
 
         try {
             const newData = await axios(updateConfig)
             const newConfig = {
-                url:`http://localhost:3001/cartitems/${id}`,
+                url:`https://mausam-mock-json-server.herokuapp.com/cartitems/${id}`,
                 method: 'PATCH',
                 data:{count:newData.data.count+count}
             }
@@ -41,7 +41,7 @@ function ProductCard({id,product_name,description,price,image_url}) {
         } catch (error) {
             // console.log(error);
             const newConfig = {
-                url:`http://localhost:3001/cartitems`,
+                url:`https://mausam-mock-json-server.herokuapp.com/cartitems`,
                 method: 'POST',
                 data:{...fetchedData.data,count:count}
             }
