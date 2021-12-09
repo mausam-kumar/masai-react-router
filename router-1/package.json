@@ -4,6 +4,10 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.2.1",
+    "@mui/material": "^5.2.3",
     "@testing-library/jest-dom": "5.11.1",
     "@testing-library/react": "10.4.7",
     "@testing-library/user-event": "12.0.11",
@@ -20,7 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "jsonServer": "json-server --watch db.json"
+    "jsonServer": "json-server --watch db.json --port 3001"
   },
   "browserslist": [
     ">0.2%",
